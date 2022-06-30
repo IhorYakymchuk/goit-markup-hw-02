@@ -1,0 +1,230 @@
+/* основной цвет текста color: #212121; */
+
+/* вторичный цвет текста color: #757575; */
+
+/* цвет ховера #2196f3; */
+
+/* основной цвет фона background: #e5e5e5; */
+
+/* вторичный цвет фона background: #F5F4FA; */
+
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e5e5e5;
+  color: var(--primary-text-color);
+}
+
+ul {
+  list-style: none;
+}
+/* скидання точок списка можна ще зробити використавши клас list (ми кожному списку надавали клас) */
+
+/* Header */
+.header {
+  background-color: #ffffff;
+}
+
+.logo {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+.header-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
+}
+
+.header-cont-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.header-cont-link:hover,
+.header-cont-link:focus {
+  color: var(--accent-color);
+}
+
+/* Hero - поки що поставив колір бекграунда #2f303a, так як ще нема картинки
+і забрав -  text-align: center; див. Figma */
+
+.hero-title {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  background-color: #2f303a;
+}
+
+/* в кнопки поки що забрав - position: absolute; див. Figma */
+.hero-btn {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* Наши преимущества */
+
+.benefits-subtitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.benefits-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+/* Чем мы занимаемся */
+.section-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+
+  letter-spacing: 0.03em;
+}
+/* поки забрав   text-align: center; */
+
+/* Наша команда */
+
+.team-subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+}
+/* поки забрав   text-align: center; */
+
+.team-position {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+/* поки забрав   text-align: center; */
+
+/* Footer */
+
+.address-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: var(--accent-color);
+}
+
+.footer-cont-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-cont-link:hover,
+.footer-cont-link:focus {
+  color: var(--accent-color);
+}
+
+/* Портфолио */
+
+.filter-btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--accent-color);
+}
+
+.projects-subtitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+
+  letter-spacing: 0.06em;
+}
+
+.projects-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
