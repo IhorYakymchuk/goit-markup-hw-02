@@ -1,38 +1,38 @@
-/* основной цвет текста color: #212121; */
-
-/* вторичный цвет текста color: #757575; */
-
-/* цвет ховера #2196f3; */
-
-/* основной цвет фона background: #e5e5e5; */
-
-/* вторичный цвет фона background: #F5F4FA; */
+/* основний колір тексту color: #212121; */
+/* другорядний колір тексту color: #757575; */
+/* колір ховера #2196f3; */
+/* основний колір фона background: #ffffff; */
+/* другорядний колір фона background: #F5F4FA; */
+/* фон HERO і футера #2f303a; */
 
 :root {
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #f5f4fa;
+  --hero-footer-bg-color: #2f303a;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #e5e5e5;
+  background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
 }
 
 ul {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+}
 /* скидання точок списка можна ще зробити використавши клас list (ми кожному списку надавали клас) */
 
 /* Header */
-.header {
-  background-color: #ffffff;
-}
 
 .logo {
-  font-family: 'Raleway';
-  font-style: normal;
+  font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -40,8 +40,16 @@ ul {
   color: var(--accent-color);
 }
 
+.studio-header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
 .header-link {
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -54,7 +62,6 @@ ul {
 }
 
 .header-cont-link {
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -67,11 +74,18 @@ ul {
   color: var(--accent-color);
 }
 
-/* Hero - поки що поставив колір бекграунда #2f303a, так як ще нема картинки
+/* в хедер сторінки портфоліо добавили клас current 
+для підсвітки сторінки, на якій ми находимось на даний момент. 
+Див. відео Репети модуль 2, вебінар 3, на відрізку 2год 30 хв*/
+.header-list .header-link.current {
+  color: var(--accent-color);
+}
+
+/* Hero 
+- поки що поставив колір бекграунда #2f303a, так як ще нема картинки
 і забрав -  text-align: center; див. Figma */
 
 .hero-title {
-  font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -80,37 +94,44 @@ ul {
   text-transform: uppercase;
 
   color: #ffffff;
-  background-color: #2f303a;
+  background-color: var(--hero-footer-bg-color);
 }
 
-/* в кнопки поки що забрав - position: absolute; див. Figma */
-.hero-btn {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  display: flex;
+/* в кнопки поки що забрав - 
+display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-
-  cursor: pointer;
-
-  width: 200px;
+position: absolute; 
+width: 200px;
   height: 50px;
   left: 700px;
   top: 430px;
 
+}
+
+див. Figma */
+.hero-btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
   background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
+.hero-btn:hover,
+.hero-btn:focus {
+  color: #188ce8;
+}
+
 /* Наши преимущества */
 
 .benefits-subtitle {
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -119,7 +140,6 @@ ul {
 }
 
 .benefits-description {
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -130,7 +150,6 @@ ul {
 
 /* Чем мы занимаемся */
 .section-title {
-  font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -141,8 +160,10 @@ ul {
 
 /* Наша команда */
 
+.team {
+  background-color: var(--secondary-bg-color);
+}
 .team-subtitle {
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -152,7 +173,6 @@ ul {
 /* поки забрав   text-align: center; */
 
 .team-position {
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -163,6 +183,18 @@ ul {
 /* поки забрав   text-align: center; */
 
 /* Footer */
+.footer {
+  background-color: var(--hero-footer-bg-color);
+}
+
+.studio-footer {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
 
 .address-link {
   font-style: normal;
@@ -195,14 +227,24 @@ ul {
 
 /* Портфолио */
 
-.filter-btn {
-  font-style: normal;
+.active-btn {
+  color: #ffffff;
+  background-color: #2196f3;
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-
-  text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
+}
+.filter-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  background-color: var(--secondary-bg-color);
 }
 
 .filter-btn:hover,
@@ -211,20 +253,16 @@ ul {
 }
 
 .projects-subtitle {
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-
   letter-spacing: 0.06em;
 }
 
 .projects-text {
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
